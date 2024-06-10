@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-4 mx-auto bg-dark text-white p-4 rounded">
+      <h4 class="text-center">Actualizar pedido</h4>
+      <br>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+        <div class="mb-3">
+          <input type="text" class="form-control" id="customer" name="customer" placeholder="Nombre del cliente"
+                 autocomplete="off" required [(ngModel)]="product.customer">
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del producto"
+                 autocomplete="off" required [(ngModel)]="product.name">
+        </div>
+
+        <div class="mb-3">
+          <input type="number" class="form-control" id="price" name="price" placeholder="Precio del producto"
+                 autocomplete="off" required [(ngModel)]="product.price">
+        </div>
+
+        <div class="mb-3">
+          <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Cantidad del producto"
+                 autocomplete="off" required [(ngModel)]="product.quantity">
+        </div>
+
+        <button class="btn btn-success w-100 mb-3" [disabled]="!f.valid">
+          <i class="fa-solid fa-pen-to-square"></i> Actualizar
+        </button>
+
+        <button class="btn btn-primary w-100" routerLink="/">
+          <i class="fa-solid fa-circle-arrow-left"></i> Atras
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

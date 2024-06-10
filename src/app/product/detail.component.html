@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="product">
+  <div class="row mt-5">
+    <div class="col-md-4 mx-auto">
+      <div class="card bg-dark text-white rounded">
+        <div class="card-header text-center">
+            PEDIDO #{{product.id}}
+        </div>
+          <div class="car-body">
+            <ul class="list-group list-group-flush">
+              <!--<li class="list-group-item"><b>Id: </b>{{product.id}}</li>-->
+              <li class="list-group-item"><b>Cliente: </b>{{product.customer}}</li>
+              <li class="list-group-item"><b>Nombre: </b>{{product.name}}</li>
+              <li class="list-group-item"><b>Precio: </b>{{product.price}}</li>
+              <li class="list-group-item"><b>Cantidad: </b>{{product.quantity}}</li>
+              <li class="list-group-item"><b>Estado: </b>{{product.status}}</li>
+            </ul>
+          </div>
+        <div class="card-footer">
+          <button class="btn btn-primary w-100" routerLink="/">
+            <i class="fa-solid fa-circle-arrow-left"></i> Atras
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
